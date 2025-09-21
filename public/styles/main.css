@@ -269,18 +269,6 @@ section {
     border: 1px solid var(--border-color);
 }
 
-.experience-section {
-    padding: 60px 0; /* reduced vertical padding */
-    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
-    color: var(--text-primary);
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 /* Section title */
 .section-title {
@@ -295,7 +283,7 @@ section {
 
 /* Category section */
 .experience-category-section {
-    margin-bottom: 40px; /* reduced gap between categories */
+    margin-bottom: 10px; /* reduced gap between categories */
     border-top: 2px solid var(--accent-color); /* straight line to distinguish */
     padding-top: 20px;
 }

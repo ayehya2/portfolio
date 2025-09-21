@@ -30,7 +30,7 @@ You'll need [Node.js](https://nodejs.org/) installed on your machine.
 1.  Clone the repository:
     ```bash
     git clone [https://github.com/ayehya2/portfolio.git/](https://github.com/ayehya2/portfolio.git/)
-    ```
+
 2.  Navigate into the project directory:
     ```bash
     cd portfolio

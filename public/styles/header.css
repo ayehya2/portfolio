@@ -89,7 +89,6 @@
     align-items: center;
 }
 
-/* Make sure header nav is positioned relative for absolute positioning to work */
 .header-nav {
     position: relative;
 }

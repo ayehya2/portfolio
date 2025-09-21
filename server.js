@@ -3,16 +3,28 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the root directory
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
+// Tell Express where to find the views (EJS files)
+app.set('views', __dirname);
+
+// Serve static files (CSS, JS) from the root directory
 app.use(express.static(__dirname));
 
-// Set up routes to serve your HTML files
+// Route for the Home page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.render('index');
 });
 
-app.get('/contact.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'contact.html'));
+// Route for the Contact page
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+// Route for the new Server page
+app.get('/server-page', (req, res) => {
+  res.render('server-page');
 });
 
 // Start the server

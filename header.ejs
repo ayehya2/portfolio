@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/animations.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/themes.css">
+<link rel="stylesheet" href="styles/main.css">
+
+
+<!-- Header -->
+    <header class="site-header">
+        <nav class="header-nav">
+            <div class="nav-brand">
+                <span class="name-element" data-original="Ahmad" data-alt="A7M4D">Ahmad</span>
+                <span class="arabic-name">أحمد</span>
+            </div>
+            <div class="nav-center">
+                <div class="digital-clock" id="header-clock"></div>
+            </div>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/contact" class="nav-link active">Contact</a></li>
+                    <li><a href="/server-page" class="nav-link">Server</a></li>          
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach(link => {
+    // Remove active from all
+    link.classList.remove("active");
+
+    // If the link's href matches the current path
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>

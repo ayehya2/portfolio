@@ -10,29 +10,7 @@
     <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body class="theme-dark">
-    <!-- Header -->
-    <header class="site-header">
-        <nav class="header-nav">
-            <div class="nav-brand">
-                <span class="name-element" data-original="Ahmad" data-alt="A7M4D">Ahmad</span>
-                <span class="arabic-name">أحمد</span>
-            </div>
-            <div class="nav-center">
-                <div class="digital-clock" id="header-clock"></div>
-            </div>
-            <div class="nav-actions">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="server.html" class="nav-link">Server</a></li>
-                </ul>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon" id="theme-icon"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
-
+    <%- include('header') %>
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
@@ -372,38 +350,7 @@
         <span>Back to Top</span>
     </button>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-clock">
-                <div class="digital-clock" id="footer-clock"></div>
-            </div>
-            <div class="footer-text">
-                <p>
-                    Thank you for your time and for visiting my website. I hope you found the content 
-                    engaging and insightful. I am always seeking to learn and grow. If you have feedback 
-                    or believe I'm a fit for an opportunity, contact me without hesitation.
-                </p>
-                <p>
-                    I am currently available and eager to contribute across software engineering, 
-                    software development, consulting, research, and related fields. If you want a 
-                    dedicated, passionate teammate or employee, I am ready to connect. I look forward 
-                    to hearing from you.
-                </p>
-            </div>
-            <div class="footer-contact">
-                <a href="contact.html" class="footer-cta">Contact Me</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Ahmad Yehya. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://github.com/ayehya2" target="_blank" rel="noopener" class="footer-link">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+    <%- include('footer') %>
 
     <script src="scripts/theme.js"></script>
     <script src="scripts/animations.js"></script>

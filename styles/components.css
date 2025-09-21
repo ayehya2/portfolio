@@ -410,23 +410,7 @@
     box-shadow: var(--shadow-md);
 }
 
-.card-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    margin-bottom: var(--space-lg);
-}
 
-.card-header i {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-}
-
-.card-header h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--text-primary);
-}
 
 .server-list {
     list-style: none;

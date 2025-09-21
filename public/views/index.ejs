@@ -59,34 +59,7 @@
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="education-section">
-            <div class="container">
-                <h2 class="section-title">&lt;/Education&gt;</h2>
-                <div class="education-content">
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3 class="university-name">Toronto Metropolitan University</h3>
-                            <span class="education-location">Toronto, ON</span>
-                        </div>
-                        <div class="degree-info">
-                            <h4 class="degree-title">Bachelor of Science (Honours) in Computer Science</h4>
-                            <span class="graduation-date">Expected: December 2025</span>
-                        </div>
-                        <p class="education-description">
-                            Focused on algorithms, data structures, operating systems, computer networks, 
-                            software engineering, cybersecurity, and machine learning. Strong foundation 
-                            in discrete mathematics, probability, and linear algebra.
-                        </p>
-                        <div class="certifications">
-                            <span class="cert-tag">Certificate in Computer Coding (2023)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <!-- Experience Section -->
+        <!-- Experience Section -->
         <section class="experience-section">
             <div class="container">
                 <h2 class="section-title">&lt;/Experience&gt;</h2>
@@ -94,9 +67,12 @@
                 <!-- Professional Experience Section -->
                 <div class="experience-category-section">
                     <div class="category-header">
-                        <h3 class="category-title">Professional Experience</h3>
+                        <h3 class="category-title">
+                            Professional Experience
+                            <button class="toggle-button" onclick="toggleSection('professional')">Show</button>
+                        </h3>
                     </div>
-                    <div class="timeline-container">
+                    <div class="timeline-container collapsed" id="professional-timeline">
                         <div class="timeline">
                             <div class="timeline-item right">
                                 <div class="timeline-content">
@@ -133,13 +109,16 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Other Experience Section -->
                 <div class="experience-category-section">
                     <div class="category-header">
-                        <h3 class="category-title">Other Experience</h3>
+                        <h3 class="category-title">
+                            Other Experience
+                            <button class="toggle-button" onclick="toggleSection('other')">Show</button>
+                        </h3>
                     </div>
-                    <div class="timeline-container">
+                    <div class="timeline-container collapsed" id="other-timeline">
                         <div class="timeline">
                             <div class="timeline-item left">
                                 <div class="timeline-content">
@@ -157,7 +136,7 @@
                                 </div>
                                 <div class="timeline-marker"></div>
                             </div>
-                        
+
                             <div class="timeline-item right">
                                 <div class="timeline-content">
                                     <h3 class="job-title">Pharmacy Assistant</h3>
@@ -174,7 +153,7 @@
                                 </div>
                                 <div class="timeline-marker"></div>
                             </div>
-                        
+
                             <div class="timeline-item left">
                                 <div class="timeline-content">
                                     <h3 class="job-title">Pharmacy Assistant | Cashier</h3>
@@ -570,3 +549,28 @@
     <script src="scripts/animations.js"></script>
     <script src="scripts/clock.js"></script>
     <script src="scripts/main.js"></script>
+
+    <script>
+function toggleSection(sectionId) {
+    const timeline = document.getElementById(sectionId + '-timeline');
+    const button = event.target;
+    
+    if (timeline.classList.contains('collapsed')) {
+        timeline.classList.remove('collapsed');
+        timeline.classList.add('expanded');
+        button.textContent = 'Hide';
+    } else {
+        timeline.classList.remove('expanded');
+        timeline.classList.add('collapsed');
+        button.textContent = 'Show';
+    }
+}
+
+// Initialize sections as collapsed
+document.addEventListener('DOMContentLoaded', function() {
+    const timelines = document.querySelectorAll('.timeline-container');
+    timelines.forEach(timeline => {
+        timeline.classList.add('collapsed');
+    });
+});
+</script>

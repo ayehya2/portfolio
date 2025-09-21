@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Server & Networking - Ahmad Yehya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body class="theme-dark">
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="header-nav">
+            <div class="nav-brand">
+                <span class="name-element" data-original="Ahmad" data-alt="A7M4D">Ahmad</span>
+                <span class="arabic-name">أحمد</span>
+            </div>
+            <div class="nav-center">
+                <div class="digital-clock" id="header-clock"></div>
+            </div>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link active">Server</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content server-main">
+        <section class="server-hero">
+            <div class="container">
+                <h1 class="section-title">&lt;/HomeServer&gt;</h1>
+                <div class="server-intro">
+                    <p class="status-badge">🚧 In Progress - Active Development</p>
+                    <p class="server-description">
+                        A comprehensive home server and networking project showcasing advanced infrastructure, 
+                        security implementations, and modern DevOps practices. This ongoing project demonstrates 
+                        expertise in system administration, virtualization, and enterprise-grade solutions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Networking Section -->
+        <section class="server-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Networking&gt;</h2>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Network Infrastructure</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>VLAN segmentation for security isolation</li>
+                            <li>pfSense firewall with advanced routing</li>
+                            <li>Ubiquiti UniFi access points</li>
+                            <li>Network monitoring with PRTG</li>
+                            <li>DNS filtering and ad-blocking</li>
+                        </ul>
+                    </div>
+
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-globe"></i>
+                            <h3>Internet Services</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Reverse proxy with Nginx</li>
+                            <li>SSL certificate automation</li>
+                            <li>Dynamic DNS configuration</li>
+                            <li>VPN server (WireGuard/OpenVPN)</li>
+                            <li>Load balancing for high availability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Storage & Media Section -->
+        <section class="server-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Storage&gt;</h2>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-hdd"></i>
+                            <h3>File Storage & Management</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Nextcloud for personal cloud</li>
+                            <li>RAID configurations for redundancy</li>
+                            <li>Automated backup strategies</li>
+                            <li>File synchronization across devices</li>
+                            <li>Version control for important documents</li>
+                        </ul>
+                    </div>
+
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Media & Entertainment</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Plex Media Server setup</li>
+                            <li>Automated media acquisition</li>
+                            <li>Transcoding optimization</li>
+                            <li>Multiple user profiles</li>
+                            <li>Mobile and TV app integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development & Security Section -->
+        <section class="server-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Development&gt;</h2>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Development & Learning</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Git server (Gitea/GitLab)</li>
+                            <li>CI/CD pipelines with Jenkins</li>
+                            <li>Development environment containers</li>
+                            <li>Code quality analysis tools</li>
+                            <li>Testing and staging environments</li>
+                        </ul>
+                    </div>
+
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Security & Privacy</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Network intrusion detection (Suricata)</li>
+                            <li>Security camera system</li>
+                            <li>Encrypted communication channels</li>
+                            <li>Vulnerability scanning automation</li>
+                            <li>Secure password management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtualization Section -->
+        <section class="server-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Virtualization&gt;</h2>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Virtual Machines</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Proxmox VE hypervisor</li>
+                            <li>Linux containers (LXC)</li>
+                            <li>Windows Server VMs</li>
+                            <li>Security testing environments</li>
+                            <li>Backup and snapshot management</li>
+                        </ul>
+                    </div>
+
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fab fa-docker"></i>
+                            <h3>Containerization</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Docker Swarm orchestration</li>
+                            <li>Kubernetes cluster management</li>
+                            <li>Microservices architecture</li>
+                            <li>Container registry (Harbor)</li>
+                            <li>Automated deployment pipelines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Automation Section -->
+        <section class="server-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Automation&gt;</h2>
+                <div class="server-grid">
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-home"></i>
+                            <h3>Home Automation & IoT</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Home Assistant integration</li>
+                            <li>Smart device management</li>
+                            <li>Automated lighting and climate</li>
+                            <li>Security system integration</li>
+                            <li>Energy monitoring and optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="server-card">
+                        <div class="card-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Monitoring & Analytics</h3>
+                        </div>
+                        <ul class="server-list">
+                            <li>Prometheus metrics collection</li>
+                            <li>Grafana dashboards</li>
+                            <li>Log aggregation with ELK stack</li>
+                            <li>Performance monitoring</li>
+                            <li>Alerting and notification systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Section -->
+        <section class="server-status">
+            <div class="container">
+                <h2 class="section-title">&lt;/Status&gt;</h2>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-indicator active"></div>
+                        <span class="status-label">Network Infrastructure</span>
+                        <span class="status-value">85% Complete</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator active"></div>
+                        <span class="status-label">Storage Solutions</span>
+                        <span class="status-value">70% Complete</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator warning"></div>
+                        <span class="status-label">Security Implementation</span>
+                        <span class="status-value">60% Complete</span>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-indicator pending"></div>
+                        <span class="status-label">Automation Systems</span>
+                        <span class="status-value">30% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cursor Avatar -->
+    <div class="cursor-avatar" id="cursor-avatar">
+        <div class="avatar-body">
+            <div class="avatar-eyes">
+                <div class="avatar-eye left"></div>
+                <div class="avatar-eye right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span>Back to Top</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-clock">
+                <div class="digital-clock" id="footer-clock"></div>
+            </div>
+            <div class="footer-text">
+                <p>
+                    Thank you for your time and for visiting my website. I hope you found the content 
+                    engaging and insightful. I am always seeking to learn and grow. If you have feedback 
+                    or believe I'm a fit for an opportunity, contact me without hesitation.
+                </p>
+                <p>
+                    I am currently available and eager to contribute across software engineering, 
+                    software development, consulting, research, and related fields. If you want a 
+                    dedicated, passionate teammate or employee, I am ready to connect. I look forward 
+                    to hearing from you.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ahmad Yehya. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/ayehya2" target="_blank" rel="noopener" class="footer-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Yehya - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body class="theme-dark">
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="header-nav">
+            <div class="nav-brand">
+                <span class="name-element" data-original="Ahmad" data-alt="A7M4D">Ahmad</span>
+                <span class="arabic-name">أحمد</span>
+            </div>
+            <div class="nav-center">
+                <div class="digital-clock" id="header-clock"></div>
+            </div>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="server.html" class="nav-link">Server</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="greeting-line">
+                        <span class="greeting-code">hi(); i am</span>
+                        <span class="greeting-arabic">سلام أنا();</span>
+                    </div>
+                    <h1 class="hero-name">
+                        <span class="name-english">Ahmad Yehya</span>
+                        <div class="name-arabic-circle">
+                            <span class="name-arabic">أحمد يحيى</span>
+                        </div>
+                    </h1>
+                    <div class="degree-line">
+                        <span class="code-comment">//</span>
+                        <span class="degree-text binary-flicker">Computer Science Undergraduate</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="cta-button">Let's Talk</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/About&gt;</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        I am a passionate Computer Science undergraduate with a deep focus on software engineering, 
+                        cybersecurity, and emerging technologies. Currently pursuing my degree at Toronto Metropolitan University, 
+                        I combine theoretical knowledge with hands-on experience in full-stack development, AI/ML applications, 
+                        and ethical hacking.
+                    </p>
+                    <div class="about-actions">
+                        <button class="download-cv-btn" disabled>
+                            <i class="fas fa-download"></i>
+                            Download CV (Coming Soon)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Education&gt;</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <div class="education-header">
+                            <h3 class="university-name">Toronto Metropolitan University</h3>
+                            <span class="education-location">Toronto, ON</span>
+                        </div>
+                        <div class="degree-info">
+                            <h4 class="degree-title">Bachelor of Science (Honours) in Computer Science</h4>
+                            <span class="graduation-date">Expected: December 2025</span>
+                        </div>
+                        <p class="education-description">
+                            Focused on algorithms, data structures, operating systems, computer networks, 
+                            software engineering, cybersecurity, and machine learning. Strong foundation 
+                            in discrete mathematics, probability, and linear algebra.
+                        </p>
+                        <div class="certifications">
+                            <span class="cert-tag">Certificate in Computer Coding (2023)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Experience&gt;</h2>
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <div class="experience-category">Professional Experience</div>
+                                <h3 class="job-title">Full-Stack Developer</h3>
+                                <span class="job-company">Personal / Team Project</span>
+                                <span class="job-period">Jan 2025 – Present</span>
+                                <p class="job-description">
+                                    Spearheaded the design and development of an AI-powered job search platform 
+                                    offering smart job aggregation, personalized recommendations, and ATS-optimized 
+                                    resume tailoring. Engineered scalable, modular architecture supporting legal 
+                                    API integrations while maintaining GDPR/CCPA compliance.
+                                </p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">AI/ML</span>
+                                </div>
+                            </div>
+                            <div class="timeline-marker"></div>
+                        </div>
+
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <div class="experience-category">Other Experience</div>
+                                <h3 class="job-title">Bookkeeping</h3>
+                                <span class="job-company">1833761 Ontario INC</span>
+                                <span class="job-period">August 2019 - Present</span>
+                                <p class="job-description">
+                                    Processed accounting tasks ensuring correct and timely completion, 
+                                    basic proficiency in QuickBooks Desktop. Providing accurate, 
+                                    up-to-date financial information with daily financial entries and reconciliations.
+                                </p>
+                            </div>
+                            <div class="timeline-marker"></div>
+                        </div>
+
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3 class="job-title">Pharmacy Assistant</h3>
+                                <span class="job-company">Pharmasave</span>
+                                <span class="job-period">September 2020 - August 2022</span>
+                                <p class="job-description">
+                                    Reduced waste by 10%, increased productivity and sales by 5%, and cut data entry 
+                                    errors by 7% through inventory management. Maintained inventory, disposed of 150 
+                                    expired products in accordance with safety protocols.
+                                </p>
+                            </div>
+                            <div class="timeline-marker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Skills&gt;</h2>
+                <div class="skills-content">
+                    <div class="skills-primary">
+                        <h3 class="skills-subtitle">Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4 class="category-title">💻 Programming Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">PHP</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4 class="category-title">🌐 Frameworks & Libraries</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">Next.js</span>
+                                    <span class="skill-tag">Vue.js</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4 class="category-title">🛢️ Databases</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">Redis</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-category">
+                                <h4 class="category-title">🤖 AI/ML & NLP</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">Scikit-learn</span>
+                                    <span class="skill-tag">OpenAI</span>
+                                    <span class="skill-tag">Hugging Face</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-secondary">
+                        <h3 class="skills-subtitle">Soft Skills</h3>
+                        <div class="soft-skills">
+                            <span class="soft-skill">Critical Thinking</span>
+                            <span class="soft-skill">Problem-Solving</span>
+                            <span class="soft-skill">Team Collaboration</span>
+                            <span class="soft-skill">Leadership</span>
+                            <span class="soft-skill">Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <div class="container">
+                <h2 class="section-title">&lt;/Projects&gt;</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Ultimate Job Finder</h3>
+                            <a href="https://github.com/ayehya2" class="project-link" target="_blank" rel="noopener" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            AI-powered job search platform with smart aggregation, personalized recommendations, 
+                            and ATS-optimized resume tailoring.
+                        </p>
+                        <div class="project-status">In Progress</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Cypress - City Problem Reporting</h3>
+                            <a href="https://github.com/ayehya2" class="project-link" target="_blank" rel="noopener" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Team project for reporting and tracking city infrastructure problems 
+                            with collaborative features and admin dashboard.
+                        </p>
+                        <div class="project-status completed">Completed</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Cybersecurity Community</h3>
+                            <a href="#" class="project-link" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Discord server administrator for 1200+ member community focused on 
+                            cybersecurity education and ethical hacking resources.
+                        </p>
+                        <div class="project-status">Ongoing</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Community Management</span>
+                            <span class="tech-tag">Cybersecurity</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Arabic & Quran Site</h3>
+                            <a href="#" class="project-link" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Educational platform for Arabic language learning and Quranic studies 
+                            with interactive features and multilingual support.
+                        </p>
+                        <div class="project-status planned">Planned</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Arabic NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">File Manager System</h3>
+                            <a href="#" class="project-link" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Advanced file management system with cloud integration, 
+                            security features, and collaborative workspace capabilities.
+                        </p>
+                        <div class="project-status planned">Planned</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Cloud Storage</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3 class="project-title">Notes & Quiz Platform</h3>
+                            <a href="#" class="project-link" aria-label="View project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Educational platform for note-taking and quiz creation to help students 
+                            with collaborative study tools and progress tracking.
+                        </p>
+                        <div class="project-status planned">Planned</div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Education Tech</span>
+                            <span class="tech-tag">Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cursor Avatar -->
+    <div class="cursor-avatar" id="cursor-avatar">
+        <div class="avatar-body">
+            <div class="avatar-eyes">
+                <div class="avatar-eye left"></div>
+                <div class="avatar-eye right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span>Back to Top</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-clock">
+                <div class="digital-clock" id="footer-clock"></div>
+            </div>
+            <div class="footer-text">
+                <p>
+                    Thank you for your time and for visiting my website. I hope you found the content 
+                    engaging and insightful. I am always seeking to learn and grow. If you have feedback 
+                    or believe I'm a fit for an opportunity, contact me without hesitation.
+                </p>
+                <p>
+                    I am currently available and eager to contribute across software engineering, 
+                    software development, consulting, research, and related fields. If you want a 
+                    dedicated, passionate teammate or employee, I am ready to connect. I look forward 
+                    to hearing from you.
+                </p>
+            </div>
+            <div class="footer-contact">
+                <a href="contact.html" class="footer-cta">Contact Me</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ahmad Yehya. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/ayehya2" target="_blank" rel="noopener" class="footer-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

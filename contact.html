@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ahmad Yehya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body class="theme-dark">
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="header-nav">
+            <div class="nav-brand">
+                <span class="name-element" data-original="Ahmad" data-alt="A7M4D">Ahmad</span>
+                <span class="arabic-name">أحمد</span>
+            </div>
+            <div class="nav-center">
+                <div class="digital-clock" id="header-clock"></div>
+            </div>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link active">Contact</a></li>
+                    <li><a href="server.html" class="nav-link">Server</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content contact-main">
+        <section class="contact-section">
+            <div class="container">
+                <h1 class="section-title">&lt;/Contact&gt;</h1>
+                <div class="contact-content">
+                    <div class="contact-intro">
+                        <p>Ready to collaborate? Let's build something amazing together.</p>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <div class="form-error" id="name-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-error" id="email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                            <div class="form-error" id="subject-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                            <div class="form-error" id="message-error"></div>
+                        </div>
+
+                        <!-- Honeypot field for spam protection -->
+                        <div class="honeypot" aria-hidden="true">
+                            <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn" id="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <div class="btn-loading" id="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="form-feedback" id="form-feedback"></div>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Available via contact form</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/ayehya2" target="_blank" rel="noopener">GitHub</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn (Coming Soon)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cursor Avatar -->
+    <div class="cursor-avatar" id="cursor-avatar">
+        <div class="avatar-body">
+            <div class="avatar-eyes">
+                <div class="avatar-eye left"></div>
+                <div class="avatar-eye right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span>Back to Top</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-clock">
+                <div class="digital-clock" id="footer-clock"></div>
+            </div>
+            <div class="footer-text">
+                <p>
+                    Thank you for your time and for visiting my website. I hope you found the content 
+                    engaging and insightful. I am always seeking to learn and grow. If you have feedback 
+                    or believe I'm a fit for an opportunity, contact me without hesitation.
+                </p>
+                <p>
+                    I am currently available and eager to contribute across software engineering, 
+                    software development, consulting, research, and related fields. If you want a 
+                    dedicated, passionate teammate or employee, I am ready to connect. I look forward 
+                    to hearing from you.
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ahmad Yehya. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/ayehya2" target="_blank" rel="noopener" class="footer-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+</html>

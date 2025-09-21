@@ -1,0 +1,396 @@
+/* Binary Flicker Animation */
+@keyframes binary-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.binary-flicker {
+    position: relative;
+    display: inline-block;
+}
+
+.binary-char {
+    animation: binary-flicker 0.5s ease-in-out;
+}
+
+/* Name Morphing Animation */
+.name-morphing {
+    position: relative;
+    overflow: hidden;
+}
+
+.name-morphing .char {
+    display: inline-block;
+    transition: var(--transition-fast);
+}
+
+.name-morphing .char.flickering {
+    animation: char-flicker 0.1s ease-in-out;
+}
+
+@keyframes char-flicker {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+}
+
+/* Binary Hover Effects */
+.binary-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.binary-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.binary-hover:hover .binary-overlay {
+    opacity: 1;
+}
+
+.binary-digit {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    color: var(--accent-color);
+    animation: binary-fall 2s linear infinite;
+}
+
+@keyframes binary-fall {
+    0% { 
+        transform: translateY(-100%); 
+        opacity: 0; 
+    }
+    10%, 90% { 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(100%); 
+        opacity: 0; 
+    }
+}
+
+/* Scroll Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dark Theme Specific Animations */
+.theme-dark .glitch-effect {
+    position: relative;
+}
+
+.theme-dark .glitch-effect::before,
+.theme-dark .glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.theme-dark .glitch-effect:hover::before {
+    animation: glitch-1 0.3s ease-in-out;
+    color: var(--accent-color);
+    z-index: -1;
+}
+
+.theme-dark .glitch-effect:hover::after {
+    animation: glitch-2 0.3s ease-in-out;
+    color: var(--accent-secondary);
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+    0%, 100% { 
+        transform: translate(0); 
+        opacity: 0; 
+    }
+    20% { 
+        transform: translate(-2px, 2px); 
+        opacity: 1; 
+    }
+    40% { 
+        transform: translate(-2px, -2px); 
+        opacity: 1; 
+    }
+    60% { 
+        transform: translate(2px, 2px); 
+        opacity: 1; 
+    }
+    80% { 
+        transform: translate(2px, -2px); 
+        opacity: 1; 
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 100% { 
+        transform: translate(0); 
+        opacity: 0; 
+    }
+    20% { 
+        transform: translate(2px, -2px); 
+        opacity: 1; 
+    }
+    40% { 
+        transform: translate(2px, 2px); 
+        opacity: 1; 
+    }
+    60% { 
+        transform: translate(-2px, -2px); 
+        opacity: 1; 
+    }
+    80% { 
+        transform: translate(-2px, 2px); 
+        opacity: 1; 
+    }
+}
+
+/* Scanline Effect */
+.theme-dark .scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        transparent 0%,
+        rgba(0, 255, 255, 0.03) 50%,
+        transparent 100%
+    );
+    background-size: 100% 4px;
+    animation: scanlines 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanlines {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+/* Neon Pulse */
+.theme-dark .neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow: 0 0 5px var(--accent-color),
+                    0 0 10px var(--accent-color),
+                    0 0 15px var(--accent-color);
+    }
+    to {
+        box-shadow: 0 0 10px var(--accent-color),
+                    0 0 20px var(--accent-color),
+                    0 0 30px var(--accent-color);
+    }
+}
+
+/* Light Theme Specific Animations */
+.theme-light .paper-texture {
+    position: relative;
+}
+
+.theme-light .paper-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(210, 105, 30, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(205, 133, 63, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.theme-light .warm-glow {
+    box-shadow: 0 0 20px rgba(210, 105, 30, 0.2);
+    transition: box-shadow var(--transition-normal);
+}
+
+.theme-light .warm-glow:hover {
+    box-shadow: 0 0 30px rgba(210, 105, 30, 0.3);
+}
+
+/* Floating Animation */
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Typing Animation */
+.typing-animation {
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color); }
+}
+
+/* Matrix Rain Effect (for dark theme backgrounds) */
+.theme-dark .matrix-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.matrix-char {
+    position: absolute;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--accent-color);
+    animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+    0% { 
+        transform: translateY(-100vh); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(100vh); 
+        opacity: 0; 
+    }
+}
+
+/* Particle System */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: particle-float 10s linear infinite;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Stagger Animation Helper */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Loading Spinner */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-top: 2px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Animation Adjustments */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .glitch-effect::before,
+    .glitch-effect::after {
+        display: none;
+    }
+    
+    .matrix-bg {
+        display: none;
+    }
+    
+    .particles {
+        display: none;
+    }
+}

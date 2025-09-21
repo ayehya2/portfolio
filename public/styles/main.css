@@ -71,13 +71,16 @@ body {
 
 /* Hero Section */
 .hero-section {
-    min-height: 90vh;
+    height: 100vh;             /* always full viewport height */
+    max-height: 100vh;         /* prevent overflow */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: var(--space-3xl) 0;
+    padding: var(--space-3xl) 20px;  /* add some horizontal padding */
+    box-sizing: border-box;    /* include padding in height calculations */
 }
+
 
 .hero-container {
     max-width: 800px;
@@ -159,7 +162,7 @@ body {
 
 /* Sections */
 section {
-    padding: 20; /* REMEMBER TEST */
+    padding: 40; /* REMEMBER TEST */
 }
 
 .section-title {
@@ -288,10 +291,8 @@ section {
     padding-top: 20px;
 }
 
-/* Category header */
 .category-header {
     display: flex;
-    justify-content: space-between; /* show/hide button on right */
     align-items: center;
     margin-bottom: var(--space-md);
 }
@@ -300,7 +301,7 @@ section {
     font-size: 2rem;
     color: var(--accent-color);
     font-weight: 600;
-    cursor: default; /* remove pointer since header is not clickable now */
+    flex-grow: 1;          /* take all remaining space */
 }
 
 /* Toggle button */
@@ -316,6 +317,8 @@ section {
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+        margin-left: auto;     /* push to the far right */
+
 }
 
 .toggle-button:hover {

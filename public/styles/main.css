@@ -60,12 +60,12 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-md); /* REMEMBER TEST */
 }
 
 /* Main Content */
 .main-content {
-    margin-top: 80px;
+    margin-top: 40px;
     min-height: calc(100vh - 80px);
 }
 
@@ -159,7 +159,7 @@ body {
 
 /* Sections */
 section {
-    padding: var(--space-3xl) 0;
+    padding: 20;
 }
 
 .section-title {

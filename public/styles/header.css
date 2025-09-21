@@ -40,12 +40,6 @@
     opacity: 0.8;
 }
 
-.nav-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 .nav-actions {
     display: flex;
     align-items: center;
@@ -83,4 +77,19 @@
     border-radius: var(--border-radius-md);
     transition: var(--transition-normal);
     font-size: 1.2rem;
+}
+
+/* Header Clock Centering */
+.header-clock {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make sure header nav is positioned relative for absolute positioning to work */
+.header-nav {
+    position: relative;
 }

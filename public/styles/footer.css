@@ -65,6 +65,29 @@
     color: var(--accent-color);
 }
 
+/* Footer Clock Centering - Override footer.css if needed */
+.footer-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--space-md) 0;
+}
+
+/* Center the clock in footer-bottom using flexbox */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-bottom .footer-clock {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
 /* Responsive design for mobile */
 @media (max-width: 768px) {
     .footer-text {

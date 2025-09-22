@@ -217,24 +217,23 @@
 
 /* Toggle button */
 .toggle-button {
-    background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));
-    color: white;
+    /* Make the button invisible */
+    background-color: transparent;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius-full);
+color: var(--accent-color);
+    /* Maintain the text styles */
+    padding: 0; /* Remove padding to make it a pure text link */
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-        margin-left: auto;     /* push to the far right */
-
+    margin-left: auto; /* push to the far right */
 }
 
 .toggle-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
 }
 
 /* Timeline container */

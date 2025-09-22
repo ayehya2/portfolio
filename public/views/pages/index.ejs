@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/themes.css">
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/animations.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="./styles/pages/index.css">
 </head>
 <body>
@@ -95,12 +95,14 @@
                 
                 <!-- Professional Experience Section -->
                 <div class="experience-category-section">
-                    <div class="category-header">
-                        <h3 class="category-title">
-                            Professional Experience
-                            <button class="toggle-button" onclick="toggleSection('professional')">Show</button>
-                        </h3>
-                    </div>
+                    <h3 class="category-title">
+                        Professional Experience
+                        <button class="toggle-button" onclick="toggleSection('professional')">
+                            <i class="fas fa-chevron-down"></i>
+                            <span>Show</span>
+                        </button>
+                    </h3>
+                
                     <div class="timeline-container collapsed" id="professional-timeline">
                         <div class="timeline">
                             <div class="timeline-item right">
@@ -144,7 +146,10 @@
                     <div class="category-header">
                         <h3 class="category-title">
                             Other Experience
-                            <button class="toggle-button" onclick="toggleSection('other')">Show</button>
+                            <button class="toggle-button" onclick="toggleSection('other')">
+                                <i class="fas fa-chevron-down"></i>
+                                <span>Show</span>
+                            </button>
                         </h3>
                     </div>
                     <div class="timeline-container collapsed" id="other-timeline">
@@ -584,19 +589,29 @@
     <script>
 function toggleSection(sectionId) {
     const timeline = document.getElementById(sectionId + '-timeline');
-    const button = event.target;
-    
+    const button = event.target.closest('button');
+    const icon = button.querySelector('i');
+    const textSpan = button.querySelector('span');
+
     if (timeline.classList.contains('collapsed')) {
+        // If it's collapsed, expand it and change icon/text to "Hide"
         timeline.classList.remove('collapsed');
         timeline.classList.add('expanded');
-        button.textContent = 'Hide';
+        
+        textSpan.textContent = 'Hide';
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+        
     } else {
+        // If it's expanded, collapse it and change icon/text to "Show"
         timeline.classList.remove('expanded');
         timeline.classList.add('collapsed');
-        button.textContent = 'Show';
+        
+        textSpan.textContent = 'Show';
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
     }
 }
-
 // Initialize sections as collapsed
 document.addEventListener('DOMContentLoaded', function() {
     const timelines = document.querySelectorAll('.timeline-container');

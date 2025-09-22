@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./styles/themes.css">
     <link rel="stylesheet" href="./styles/components.css">
     <link rel="stylesheet" href="./styles/animations.css">
+
+    <link rel="stylesheet" href="./styles/pages/index.css">
 </head>
-<body class="theme-dark">
-    <%- include('header') %>
+<body>
+    <%- include('../partials/header') %>
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
@@ -393,41 +395,43 @@
                         </div>
                     </div>
                 
-                    <div class="skills-secondary">
-                        <div class="secondary-section">
-                            <h3 class="secondary-title">🧠 Soft Skills</h3>
-                            <div class="soft-skills">
-                                <span class="soft-skill">Critical Thinking</span>
-                                <span class="soft-skill">Detail-Oriented</span>
-                                <span class="soft-skill">Adaptability</span>
-                                <span class="soft-skill">Communication</span>
-                                <span class="soft-skill">Collaboration</span>
-                                <span class="soft-skill">Teamwork</span>
-                                <span class="soft-skill">Problem-Solving</span>
-                                <span class="soft-skill">Analytical Thinking</span>
-                                <span class="soft-skill">Time Management</span>
-                                <span class="soft-skill">Integrity</span>
-                                <span class="soft-skill">Leadership</span>
+                    <div class="skills-primary">
+                        <h3 class="skills-subtitle">Non Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4 class="category-title">🧠 Soft Skills</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Critical Thinking</span>
+                                    <span class="skill-tag">Detail-Oriented</span>
+                                    <span class="skill-tag">Adaptability</span>
+                                    <span class="skill-tag">Communication</span>
+                                    <span class="skill-tag">Collaboration</span>
+                                    <span class="skill-tag">Teamwork</span>
+                                    <span class="skill-tag">Problem-Solving</span>
+                                    <span class="skill-tag">Analytical Thinking</span>
+                                    <span class="skill-tag">Time Management</span>
+                                    <span class="skill-tag">Integrity</span>
+                                    <span class="skill-tag">Leadership</span>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="secondary-section">
-                            <h3 class="secondary-title">🗣️ Languages Spoken</h3>
-                            <div class="soft-skills">
-                                <span class="soft-skill">English (Fluent)</span>
-                                <span class="soft-skill">Arabic (Fluent)</span>
+                            <div class="skill-category">
+                                <h4 class="category-title">🗣️ Languages Spoken</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">English (Fluent)</span>
+                                    <span class="skill-tag">Arabic (Fluent)</span>
+
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="secondary-section">
-                            <h3 class="secondary-title">🎨 Interests</h3>
-                            <div class="soft-skills">
-                                <span class="soft-skill">Coding</span>
-                                <span class="soft-skill">Reading</span>
-                                <span class="soft-skill">Writing</span>
-                                <span class="soft-skill">Cooking</span>
-                                <span class="soft-skill">Volunteer Work</span>
-                                <span class="soft-skill">Ethical Hacking</span>
+                            <div class="skill-category">
+                                <h4 class="category-title">🎨 Interests</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Coding</span>
+                                    <span class="skill-tag">Reading</span>
+                                    <span class="skill-tag">Writing</span>
+                                    <span class="skill-tag">Cooking</span>
+                                    <span class="skill-tag">Volunteer Work</span>
+                                    <span class="skill-tag">Ethical Hacking</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -570,7 +574,7 @@
         <span>Back to Top</span>
     </button>
 
-    <%- include('footer') %>
+    <%- include('../partials/footer') %>
 
     <script src="scripts/theme.js"></script>
     <script src="scripts/animations.js"></script>

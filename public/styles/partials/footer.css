@@ -101,8 +101,37 @@
     }
     
     .footer-bottom {
+        display: flex;
         flex-direction: column;
-        gap: var(--space-md);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
         text-align: center;
+    }
+
+    .footer-clock {
+        width: 100%;
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Add this new rule to fix the logo position */
+    .footer-links {
+        position: static; /* Overrides any absolute or relative positioning */
+        margin-top: -10px; /* Adjust this value as needed to reduce the gap */
+    }
+
+    .footer-links .footer-link {
+        /* You can add specific rules for the link here if needed */
+        display: block;
+        margin-top: 10px;
+    }
+
+    .footer-bottom > * {
+        margin: 15px 0;
     }
 }
